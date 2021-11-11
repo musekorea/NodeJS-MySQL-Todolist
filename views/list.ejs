@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./components/HEADER.ejs")%>
+    <script defer src="./js/list.js"></script>
+  </head>
+  <body>
+    <%- include("./components/NAV.ejs")%>
+    <div class="container mt-5">
+      <%for(let i=0;i<todolists.length;i++){%>
+      <div id="<%=todolists[i].ID%>">
+      <p>
+          <a href="/description/<%=todolists[i].ID%>" class="link" id="<%=todolists[i].ID%>">
+            <%=todolists[i].todo%> <%=todolists[i].createdAt%> </a>
+      </p>
+      </div>
+      <%}%> 
+    </div>
+  </body>
+</html>

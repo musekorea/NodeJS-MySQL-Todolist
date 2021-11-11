@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./components/HEADER.ejs")%>
+    <link rel="stylesheet" href="/css/desc.css" />
+    <script defer src="/js/desc.js"></script>
+  </head>
+  <body>
+    <%- include("./components/NAV.ejs")%>
+    <div class="container mt-5">
+      <h1>DESCRIPTION</h1>
+      <div id="<%=todolist.ID%>">
+        <p><%=todolist.todo%></p>
+        <button type="button" id="editBtn" class="btn btn-warning">EDIT</button>
+        <button type="button" id="delBtn" class="btn btn-danger">DELETE</button>
+      </div>
+      <!-- EDIT FORM -->
+      <div id="editForm" class="hide">
+        <form action="#">
+          <input type="text" value="<%=todolist.todo%>" />
+          <button type="submit" id="doneBtn" class="btn btn-success">
+            DONE
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

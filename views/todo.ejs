@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./components/HEADER.ejs")%>
+  </head>
+  <body>
+    <%- include("./components/NAV.ejs")%>
+    <div class="container mt-5">
+      <form action="/todo" method="post">
+        <input type="text" name="todo" placeholder="Write a todo" />
+      </form>
+    </div>
+  </body>
+</html>
